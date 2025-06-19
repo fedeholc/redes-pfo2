@@ -10,6 +10,9 @@ description: "PFO2 - Sistema de Gestión de Tareas con API y Base de Datos"
 
 **Estudiante: Federico Holc**
 
+_Repositorio:_ [https://github.com/fedeholc/redes-pfo2](https://github.com/fedeholc/redes-pfo2)
+_Documentación en GitHub Pages:_ https://fedeholc.github.io/redes-pfo2/
+
 ## Requisitos previos
 
 - Python 3.8 o superior
