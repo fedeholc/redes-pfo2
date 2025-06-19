@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Programación sobre Redes - 3°B"
+description: "PFO2 - Sistema de Gestión de Tareas con API y Base de Datos"
+---
+
 # Programación sobre Redes - 3°B
 
 # PFO2 - Sistema de Gestión de Tareas con API y Base de Datos
