@@ -209,6 +209,7 @@ python cliente.py
 # Suite completa de pruebas automatizadas
 python test_completo.py
 
-# Ver resultados detallados
+# Ver resultados detallados (dado que se pueden ejecutar los tests y ver los resultados consideré que no era necesario adjuntar capturas de pantalla de los mismos)
+
 ls api-tests/
 ```
