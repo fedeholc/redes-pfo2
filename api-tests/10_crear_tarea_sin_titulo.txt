@@ -1,0 +1,15 @@
+=== 10_crear_tarea_sin_titulo ===
+Descripción: Intentar crear tarea sin proporcionar título
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/api/tareas'     -H 'Content-Type: application/json'     -d '{"descripcion": "Tarea sin título"}'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Debe proporcionar un t\u00edtulo para la tarea"
+}
+
+HTTP Status: 400
+Tiempo total: 0.000804s
+
+--- STATUS ---
+Exit code: 0

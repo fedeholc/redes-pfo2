@@ -1,0 +1,15 @@
+=== 15_eliminar_tarea ===
+Descripción: Eliminar una tarea específica
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X DELETE 'http://localhost:5000/api/tareas/2'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Tarea no encontrada"
+}
+
+HTTP Status: 404
+Tiempo total: 0.000737s
+
+--- STATUS ---
+Exit code: 0

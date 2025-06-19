@@ -1,0 +1,18 @@
+=== 09_crear_tarea ===
+Descripción: Crear una nueva tarea con título y descripción
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/api/tareas'     -H 'Content-Type: application/json'     -d '{"titulo": "Tarea de prueba con curl", "descripcion": "Esta tarea fue creada usando curl para probar la API"}'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "descripcion": "Esta tarea fue creada usando curl para probar la API",
+  "mensaje": "Tarea creada exitosamente",
+  "tarea_id": 17,
+  "titulo": "Tarea de prueba con curl"
+}
+
+HTTP Status: 201
+Tiempo total: 0.004682s
+
+--- STATUS ---
+Exit code: 0

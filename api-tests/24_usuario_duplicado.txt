@@ -1,0 +1,15 @@
+=== 24_usuario_duplicado ===
+Descripción: Intentar registrar un usuario que ya existe
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/registro'     -H 'Content-Type: application/json'     -d '{"usuario": "demo_user_1750332371", "contraseña": "otra_password"}'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "El usuario ya existe"
+}
+
+HTTP Status: 409
+Tiempo total: 0.159210s
+
+--- STATUS ---
+Exit code: 0

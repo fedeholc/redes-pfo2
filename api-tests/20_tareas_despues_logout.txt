@@ -1,0 +1,31 @@
+=== 20_tareas_despues_logout ===
+Descripción: Verificar que no se puede acceder a tareas después del logout
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     'http://localhost:5000/api/tareas'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "tareas": [
+    {
+      "completada": false,
+      "descripcion": "Esta tarea fue creada usando curl para probar la API",
+      "fecha_creacion": "2025-06-19 11:26:12",
+      "id": 17,
+      "titulo": "Tarea de prueba con curl"
+    },
+    {
+      "completada": false,
+      "descripcion": "Esta tarea ser\u00e1 actualizada en las pruebas",
+      "fecha_creacion": "2025-06-19 11:26:12",
+      "id": 18,
+      "titulo": "Tarea para actualizar"
+    }
+  ],
+  "total": 2
+}
+
+HTTP Status: 200
+Tiempo total: 0.000820s
+
+--- STATUS ---
+Exit code: 0

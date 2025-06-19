@@ -1,0 +1,15 @@
+=== 06_login_invalido ===
+Descripción: Intentar login con contraseña incorrecta
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/login'     -H 'Content-Type: application/json'     -d '{"usuario": "demo_user_1750332371", "contraseña": "password_incorrecta"}'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Credenciales inv\u00e1lidas"
+}
+
+HTTP Status: 401
+Tiempo total: 0.171702s
+
+--- STATUS ---
+Exit code: 0

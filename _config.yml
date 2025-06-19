@@ -1,0 +1,26 @@
+theme: minima
+title: "Programación sobre Redes - 3°B - PFO2"
+description: "Sistema de Gestión de Tareas con API y Base de Datos"
+author: "Federico Holc"
+
+# GitHub Pages settings
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Build settings
+exclude:
+  - .venv/
+  - __pycache__/
+  - "*.pyc"
+  - requirements.txt
+  - .gitignore
+  - tareas.db
+
+# Collection for documentation
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/

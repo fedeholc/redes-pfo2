@@ -1,0 +1,15 @@
+=== 04_registro_sin_datos ===
+Descripción: Intentar registrar usuario sin proporcionar datos
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/registro'     -H 'Content-Type: application/json'     -d '{}'
+Fecha: 2025-06-19 08:26:11
+
+--- RESPUESTA ---
+{
+  "error": "Debe proporcionar usuario y contrase\u00f1a"
+}
+
+HTTP Status: 400
+Tiempo total: 0.000719s
+
+--- STATUS ---
+Exit code: 0

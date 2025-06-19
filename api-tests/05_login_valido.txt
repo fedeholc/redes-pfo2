@@ -1,0 +1,17 @@
+=== 05_login_valido ===
+Descripción: Iniciar sesión con credenciales válidas y guardar cookies
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/login'     -H 'Content-Type: application/json'     -d '{"usuario": "demo_user_1750332371", "contraseña": "demo123456"}'     -c 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "mensaje": "Inicio de sesi\u00f3n exitoso",
+  "usuario": "demo_user_1750332371",
+  "usuario_id": 19
+}
+
+HTTP Status: 200
+Tiempo total: 0.199650s
+
+--- STATUS ---
+Exit code: 0

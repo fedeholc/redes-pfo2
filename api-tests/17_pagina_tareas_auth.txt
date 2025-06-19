@@ -1,0 +1,134 @@
+=== 17_pagina_tareas_auth ===
+Descripción: Acceder a la página HTML de tareas (autenticado)
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     'http://localhost:5000/tareas'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mis Tareas - Sistema de Gestión</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                text-align: center;
+                max-width: 800px;
+                width: 90%;
+            }
+            h1 {
+                color: #333;
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+            }
+            .welcome {
+                color: #667eea;
+                font-size: 1.4rem;
+                margin-bottom: 2rem;
+            }
+            .info-box {
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 10px;
+                margin: 2rem 0;
+                text-align: left;
+            }
+            .api-info {
+                margin: 1rem 0;
+                padding: 0.5rem;
+                border-left: 4px solid #28a745;
+                padding-left: 1rem;
+            }
+            .method {
+                font-weight: bold;
+                color: #28a745;
+            }
+            .logout-btn {
+                background: #dc3545;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+            .logout-btn:hover {
+                background: #c82333;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Gestión de Tareas</h1>
+            <p class="welcome">¡Bienvenido, <strong>demo_user_1750332371</strong>!</p>
+            
+            <div class="info-box">
+                <h3>API de Tareas disponible:</h3>
+                
+                <div class="api-info">
+                    <span class="method">GET</span> /api/tareas<br>
+                    <small>Obtener todas tus tareas</small>
+                </div>
+                
+                <div class="api-info">
+                    <span class="method">POST</span> /api/tareas<br>
+                    <small>Crear una nueva tarea<br>
+                    Body: {"titulo": "Mi tarea", "descripcion": "Descripción opcional"}</small>
+                </div>
+                
+                <div class="api-info">
+                    <span class="method">PUT</span> /api/tareas/&lt;id&gt;<br>
+                    <small>Actualizar una tarea existente</small>
+                </div>
+                
+                <div class="api-info">
+                    <span class="method">DELETE</span> /api/tareas/&lt;id&gt;<br>
+                    <small>Eliminar una tarea</small>
+                </div>
+            </div>
+            
+            <button class="logout-btn" onclick="logout()">Cerrar Sesión</button>
+        </div>
+        
+        <script>
+            function logout() {
+                fetch('/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.mensaje);
+                    window.location.href = '/';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            }
+        </script>
+    </body>
+    </html>
+    
+HTTP Status: 200
+Tiempo total: 0.001510s
+
+--- STATUS ---
+Exit code: 0

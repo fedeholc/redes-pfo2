@@ -1,0 +1,18 @@
+=== 11_crear_segunda_tarea ===
+Descripción: Crear segunda tarea para pruebas de actualización
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/api/tareas'     -H 'Content-Type: application/json'     -d '{"titulo": "Tarea para actualizar", "descripcion": "Esta tarea será actualizada en las pruebas"}'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "descripcion": "Esta tarea ser\u00e1 actualizada en las pruebas",
+  "mensaje": "Tarea creada exitosamente",
+  "tarea_id": 18,
+  "titulo": "Tarea para actualizar"
+}
+
+HTTP Status: 201
+Tiempo total: 0.003323s
+
+--- STATUS ---
+Exit code: 0

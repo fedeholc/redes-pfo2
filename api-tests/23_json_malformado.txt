@@ -1,0 +1,15 @@
+=== 23_json_malformado ===
+Descripción: Enviar JSON malformado al endpoint de registro
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/registro'     -H 'Content-Type: application/json'     -d '{"usuario": "test", "contraseña":}'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Error interno del servidor: 400 Bad Request: Failed to decode JSON object: Expecting value: line 1 column 34 (char 33)"
+}
+
+HTTP Status: 500
+Tiempo total: 0.000514s
+
+--- STATUS ---
+Exit code: 0

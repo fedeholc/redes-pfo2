@@ -1,0 +1,15 @@
+=== 19_logout ===
+Descripción: Cerrar sesión del usuario actual
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/logout'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "mensaje": "Sesi\u00f3n cerrada exitosamente"
+}
+
+HTTP Status: 200
+Tiempo total: 0.000884s
+
+--- STATUS ---
+Exit code: 0

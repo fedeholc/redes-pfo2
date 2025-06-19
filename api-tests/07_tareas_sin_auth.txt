@@ -1,0 +1,15 @@
+=== 07_tareas_sin_auth ===
+Descripción: Intentar acceder a tareas sin estar autenticado
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     'http://localhost:5000/api/tareas'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Debe iniciar sesi\u00f3n primero"
+}
+
+HTTP Status: 401
+Tiempo total: 0.000917s
+
+--- STATUS ---
+Exit code: 0

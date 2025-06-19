@@ -1,0 +1,17 @@
+=== 22_metodo_no_permitido ===
+Descripción: Usar método HTTP no permitido en un endpoint
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X PATCH 'http://localhost:5000/registro'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+<!doctype html>
+<html lang=en>
+<title>405 Method Not Allowed</title>
+<h1>Method Not Allowed</h1>
+<p>The method is not allowed for the requested URL.</p>
+
+HTTP Status: 405
+Tiempo total: 0.000945s
+
+--- STATUS ---
+Exit code: 0

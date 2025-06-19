@@ -1,0 +1,16 @@
+=== 08_obtener_tareas ===
+Descripción: Obtener lista de tareas del usuario autenticado
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     'http://localhost:5000/api/tareas'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "tareas": [],
+  "total": 0
+}
+
+HTTP Status: 200
+Tiempo total: 0.000811s
+
+--- STATUS ---
+Exit code: 0

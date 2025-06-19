@@ -1,0 +1,15 @@
+=== 03_registro_invalido ===
+Descripción: Intentar registrar usuario con contraseña muy corta
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/registro'     -H 'Content-Type: application/json'     -d '{"usuario": "user_invalid", "contraseña": "123"}'
+Fecha: 2025-06-19 08:26:11
+
+--- RESPUESTA ---
+{
+  "error": "La contrase\u00f1a debe tener al menos 4 caracteres"
+}
+
+HTTP Status: 400
+Tiempo total: 0.000824s
+
+--- STATUS ---
+Exit code: 0

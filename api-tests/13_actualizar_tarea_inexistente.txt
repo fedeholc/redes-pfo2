@@ -1,0 +1,15 @@
+=== 13_actualizar_tarea_inexistente ===
+Descripción: Intentar actualizar una tarea que no existe
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X PUT 'http://localhost:5000/api/tareas/999'     -H 'Content-Type: application/json'     -d '{"completada": true}'     -b 'test_cookies.txt'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Tarea no encontrada"
+}
+
+HTTP Status: 404
+Tiempo total: 0.000779s
+
+--- STATUS ---
+Exit code: 0

@@ -1,0 +1,17 @@
+=== 02_registro_valido ===
+Descripción: Registrar un nuevo usuario con datos válidos
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     -X POST 'http://localhost:5000/registro'     -H 'Content-Type: application/json'     -d '{"usuario": "test_user_1750332371", "contraseña": "test123456"}'
+Fecha: 2025-06-19 08:26:11
+
+--- RESPUESTA ---
+{
+  "mensaje": "Usuario registrado exitosamente",
+  "usuario": "test_user_1750332371",
+  "usuario_id": 18
+}
+
+HTTP Status: 201
+Tiempo total: 0.201537s
+
+--- STATUS ---
+Exit code: 0

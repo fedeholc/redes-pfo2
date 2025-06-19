@@ -1,0 +1,119 @@
+=== 01_home ===
+Descripción: Obtener página de inicio del sistema
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n' 'http://localhost:5000/'
+Fecha: 2025-06-19 08:26:11
+
+--- RESPUESTA ---
+
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sistema de Gestión de Tareas</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                background: white;
+                padding: 2rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                text-align: center;
+                max-width: 600px;
+                width: 90%;
+            }
+            h1 {
+                color: #333;
+                margin-bottom: 1rem;
+                font-size: 2.5rem;
+            }
+            .subtitle {
+                color: #666;
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            .endpoints {
+                text-align: left;
+                background: #f8f9fa;
+                padding: 1.5rem;
+                border-radius: 10px;
+                margin: 2rem 0;
+            }
+            .endpoint {
+                margin: 1rem 0;
+                padding: 0.5rem;
+                border-left: 4px solid #667eea;
+                padding-left: 1rem;
+            }
+            .method {
+                font-weight: bold;
+                color: #667eea;
+            }
+            .footer {
+                margin-top: 2rem;
+                color: #999;
+                font-size: 0.9rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sistema de Gestión de Tareas</h1>
+            <p class="subtitle">API REST con Flask y SQLite</p>
+            
+            <div class="endpoints">
+                <h3>Endpoints disponibles:</h3>
+                
+                <div class="endpoint">
+                    <span class="method">POST</span> /registro<br>
+                    <small>Registrar un nuevo usuario</small>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="method">POST</span> /login<br>
+                    <small>Iniciar sesión</small>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="method">POST</span> /logout<br>
+                    <small>Cerrar sesión</small>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="method">GET</span> /tareas<br>
+                    <small>Ver página de bienvenida de tareas (requiere login)</small>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="method">GET</span> /api/tareas<br>
+                    <small>Obtener todas las tareas (requiere login)</small>
+                </div>
+                
+                <div class="endpoint">
+                    <span class="method">POST</span> /api/tareas<br>
+                    <small>Crear una nueva tarea (requiere login)</small>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Las contraseñas están protegidas con hash bcrypt</p>
+                <p>Los datos se almacenan en SQLite</p>
+            </div>
+        </div>
+    </body>
+    </html>
+    
+HTTP Status: 200
+Tiempo total: 0.001236s
+
+--- STATUS ---
+Exit code: 0

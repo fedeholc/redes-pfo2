@@ -1,0 +1,15 @@
+=== 21_endpoint_inexistente ===
+Descripción: Probar acceso a un endpoint que no existe
+Comando: curl -s -w '\nHTTP Status: %{http_code}\nTiempo total: %{time_total}s\n'     'http://localhost:5000/endpoint/que/no/existe'
+Fecha: 2025-06-19 08:26:12
+
+--- RESPUESTA ---
+{
+  "error": "Endpoint no encontrado"
+}
+
+HTTP Status: 404
+Tiempo total: 0.000586s
+
+--- STATUS ---
+Exit code: 0
